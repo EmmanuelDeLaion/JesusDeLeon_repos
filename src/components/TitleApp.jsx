@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Title = "Listado de Pokemon";
+const titleApp = "Listado de Pokemon";
+
 export const TitleApp = () => {
   return (
-    <h1>{Title}</h1>
+    <h1 className='title-app'>{titleApp}</h1>
   )
 }

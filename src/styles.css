@@ -1,0 +1,132 @@
+:root{
+    --color-navbar: #99ADBB;
+    --color-buttons: #0089E0;
+    --color-border-input: #CED4D9;
+    --color-white: #ffffff;
+    /* color cards borders  */
+    --color-card-view: #7862E9;
+    --color-card-1: #0CB2A7;
+    --color-card-2:#F19756;
+    --color-card-3:#E25F76;
+    --color-card-4:#909BA6;
+    /* color cards backgrounds  */
+    --color-card-view-background: #B6AAFF;
+    --color-card-1-background: #76DACE;
+    --color-card-2-background:#FBC098;
+    --color-card-3-background:#F59DAB;
+    --color-card-4-background:#C0D0DA;
+    /* titulos */
+    --color-title-app: #2B3C47;
+    --color-titles: #2B3C47;
+    /* fuentes */
+    --font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+body{
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    background-image: url(assets/images/fondo-img.png);
+}
+
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.navbar{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: 30px;
+    background-color: var(--color-navbar);
+    border: none;
+}
+
+
+/* titulos  */
+.title-app{
+    font-size: 40px;
+    color: var(--color-title-app);
+    font-weight: bold;
+    margin: 15px;
+    text-align: center;
+}
+
+.titles-desc{
+    line-height: 10px;
+}
+
+
+.title-card-pokemon{
+    line-height: 10px;
+    text-align: center;
+}
+
+.number-card-pokemon{
+    font-size: 30px;
+    line-height: 10px;
+    text-align: center;
+}
+
+
+/* search  */
+.container-search{
+    position: relative;
+    width: 86%;
+    margin: 0 19%;
+}
+
+.input-search {
+    border: 2px solid var(--color-border-input);
+    background-color: var(--color-white);
+    border-radius: 5px;
+    width: 30%;
+    height: 50px;
+}
+
+.search{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-search{
+    position: relative;
+    height: 90%;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--color-white);
+}
+
+input{
+    padding: 0 0 0 15px;
+    margin: 0%;
+    position: relative;
+    height: 50px;
+    width: 80%;
+    border: none;
+    font-size: 20px;
+    color: var(--color-titles);
+    font-weight: bold;
+}
+
+input::placeholder{
+    color: var(--color-titles);
+    opacity: 40%;
+}
+
+input:focus,
+input:active{
+    outline: none;
+    border: none;
+}
+
+.icono-search{
+    width: 15px;
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const CardGridPokemon = () => {
+export const GridCardPokemons = () => {
   return (
     <>
     
