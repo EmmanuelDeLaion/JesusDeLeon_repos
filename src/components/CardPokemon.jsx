@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import { getPokemonName } from '../helpers/getPokemonName';
 
-export const CardPokemon = ({pokemon, getPokemonViewGrid}) => {
+export const CardPokemon = ({ pokemon, getPokemonViewGrid }) => {
 
- 
-    const getPokemonView = async(name) => { 
-        const pokemonSelected = await getPokemonName(name); 
-        getPokemonViewGrid(pokemonSelected); 
+    const getPokemonView = async (name) => {
+        const pokemonSelected = await getPokemonName(name);
+        getPokemonViewGrid(pokemonSelected);
     }
- 
+
     return (
         <>
             <div onClick={() => getPokemonView(pokemon.name)} className="card-colum">

@@ -19,7 +19,6 @@ export const SearchPokemon = ({ getNameSearch }) => {
             const pokemonSelected = await getPokemonName(inputValue);
             if (Object.entries(pokemonSelected).length !== 0 || pokemonSelected === undefined) {
                 setPokemon(pokemonSelected);
-                //console.log(inputValue); 
                 getNameSearch(pokemonSelected);
             } else {
                 console.log("No se encontro el pokemon");
@@ -32,10 +31,10 @@ export const SearchPokemon = ({ getNameSearch }) => {
 
     return (
         <>
+
             <button onClick={searchPokemon} className='btn-search'>
                 <img className='icono-search' src={iconoSearch} alt="" />
             </button>
-
 
             <input
                 type="text"
@@ -43,7 +42,6 @@ export const SearchPokemon = ({ getNameSearch }) => {
                 value={inputValue}
                 onChange={(event) => onInputChange(event)}
             />
-
 
         </>
     )

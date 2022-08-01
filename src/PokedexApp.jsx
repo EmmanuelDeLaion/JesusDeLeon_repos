@@ -1,4 +1,4 @@
-import React, { useState } from 'react' 
+import React, { useState } from 'react'
 import { CardViewPokemon } from './components/CardViewPokemon'
 import { GridCardPokemons } from './components/GridCardPokemons'
 import { Navbar } from './components/Navbar'
@@ -8,18 +8,15 @@ import { TitleApp } from './components/TitleApp'
 export const PokedexApp = () => {
 
   const [pokemonDataSelected, setPokemonDataSelected] = useState({});
-  //const [namePokemonSearch, setNamePokemonSearch] = useState({});
-
 
   const getPokemonViewPokedex = (name) => {
     setPokemonDataSelected(name);
-    //console.log(name);  
   }
 
   const getNameSearch = (namePokemon) => {
     setPokemonDataSelected(namePokemon);
   }
- 
+
   return (
     <>
       <Navbar></Navbar>
@@ -28,8 +25,8 @@ export const PokedexApp = () => {
       <div className="container-search">
         <div className="input-search">
           <div className="search">
-            <SearchPokemon 
-              getNameSearch={(namePokemon) => getNameSearch(namePokemon)} 
+            <SearchPokemon
+              getNameSearch={(namePokemon) => getNameSearch(namePokemon)}
             >
             </SearchPokemon>
           </div>
@@ -37,26 +34,22 @@ export const PokedexApp = () => {
       </div>
 
       <div className="grid-layout">
+
         <div className="grid-card">
-          <GridCardPokemons 
-            getPokemonViewPokedex={(name)=>getPokemonViewPokedex(name)}
+          <GridCardPokemons
+            getPokemonViewPokedex={(name) => getPokemonViewPokedex(name)}
           >
           </GridCardPokemons>
         </div>
 
         <div className="grid-card">
-           
-          <CardViewPokemon 
-            //namePokemonSearch={namePokemonSearch} 
-            pokemonDataSelected={pokemonDataSelected}  
-            >
+          <CardViewPokemon
+            pokemonDataSelected={pokemonDataSelected}
+          >
           </CardViewPokemon>
-        
         </div>
 
       </div>
- 
-      
 
     </>
   )

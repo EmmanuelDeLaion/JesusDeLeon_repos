@@ -22,7 +22,6 @@
     --font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
 body{
     overflow-x: hidden;
     padding: 0;
@@ -33,7 +32,6 @@ body{
 *{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
 
 .navbar{
     position: relative;
@@ -46,7 +44,6 @@ body{
     background-color: var(--color-navbar);
     border: none;
 }
-
 
 /* titulos  */
 .title-app{
@@ -61,7 +58,6 @@ body{
     line-height: 10px;
 }
 
-
 .title-card-pokemon{
     line-height: 10px;
     text-align: center;
@@ -72,7 +68,6 @@ body{
     line-height: 10px;
     text-align: center;
 }
-
 
 /* search  */
 .container-search{
@@ -117,7 +112,6 @@ body{
     color: #ffffff; 
 }
 
- 
 input{
     padding: 0 0 0 15px;
     margin: 0%;
@@ -145,8 +139,6 @@ input:active{
     width: 15px;
 }
 
-
-
 /* grid layout  */
 .grid-layout {
     position: relative;
@@ -173,8 +165,6 @@ input:active{
     height: 100%; 
 }
 
-
-
 .card-colum{
     position: relative;
     display: flex;
@@ -200,7 +190,6 @@ input:active{
     cursor: pointer;
 }
 
-
 .card-colum:nth-child(1){
     background-color: var(--color-card-1-background);
     border: 2px solid var(--color-card-1);
@@ -221,12 +210,10 @@ input:active{
     border: 2px solid var(--color-card-4);
 }
  
- 
 .card-img-pokemon{
     margin-top: 10px;
     width: 100px;
 }
-
 
 /* card pokemon view  */
 .card-colum-view{
@@ -274,10 +261,9 @@ input:active{
     margin: 0 5px;
     background-color: var(--color-white);
 }
-
  
  /* botones  */
- .group-buttons{
+.group-buttons{
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -306,7 +292,6 @@ input:active{
     color: #ffffff;
     transform: scale(1.1);
 }
-
 
 .icono-der{
     margin: 0 0 0 10px;

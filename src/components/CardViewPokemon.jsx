@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 
 export const CardViewPokemon = ({ pokemonDataSelected }) => {
- 
+
 
   return (
     <>
       <div className="card-colum-view">
-
         <div className="card-pokemon-view">
 
           <div className="container-img-pokemon-view">
@@ -15,8 +14,6 @@ export const CardViewPokemon = ({ pokemonDataSelected }) => {
                 ? <img className='card-img-pokemon-view' src="https://assets.puzzlefactory.pl/puzzle/254/191/original.webp" alt="" />
                 : <img className='card-img-pokemon-view' src={pokemonDataSelected.sprites.front_default} alt="" />
             }
-
-
           </div>
 
           {
@@ -25,14 +22,11 @@ export const CardViewPokemon = ({ pokemonDataSelected }) => {
               : <h3 className='number-card-pokemon'>#{pokemonDataSelected.id}</h3>
           }
 
-
           {
             Object.entries(pokemonDataSelected).length === 0
               ? <h3 className='title-card-pokemon'>Pikachu</h3>
               : <h3 className='title-card-pokemon'>{pokemonDataSelected.name}</h3>
           }
-
-
 
           <h3 className='titles-desc'>Types</h3>
           {
@@ -43,15 +37,12 @@ export const CardViewPokemon = ({ pokemonDataSelected }) => {
               })
           }
 
-
           <h3 className='titles-desc'>Peso</h3>
           {
             Object.entries(pokemonDataSelected).length === 0
               ? <p >11</p>
               : <p>{pokemonDataSelected.weight}</p>
           }
-
-
 
           <h3 className='titles-desc'>Sprites</h3>
           <div className="sprites">
@@ -78,6 +69,8 @@ export const CardViewPokemon = ({ pokemonDataSelected }) => {
 
         </div>
       </div>
+
     </>
+
   )
 }
