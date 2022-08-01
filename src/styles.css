@@ -90,20 +90,34 @@ body{
 }
 
 .search{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     position: relative;
+    padding: 0 5px;
+    margin: 0;
     width: 100%;
     height: 100%;
 }
 
 .btn-search{
+    margin: 0;
     position: relative;
-    height: 90%;
-    height: 50px;
+    width: 50px;
+    height: 85%;
     border: none;
     cursor: pointer;
     background-color: var(--color-white);
+    transition: all 0.15s;
+    border-radius: 5px;
 }
 
+.btn-search:hover {
+    background-color: var(--color-card-1);
+    color: #ffffff; 
+}
+
+ 
 input{
     padding: 0 0 0 15px;
     margin: 0%;
@@ -168,6 +182,7 @@ input:active{
     align-items: center;
     width: 250px;
     height: 270px; 
+    border-radius: 5px;
     transition: all 0.15s;
 }
 
@@ -217,7 +232,7 @@ input:active{
 .card-colum-view{
     position: relative;
     width: 100%;
-    height: 100%; 
+    height: 100%;
 }
 
 .card-pokemon-view{
@@ -225,6 +240,7 @@ input:active{
    height: 100%;
    margin: 0 auto;
    padding: 0 30px 0 30px;
+   border-radius: 5px;
    border: 3px solid var(--color-card-view); 
    background-color: var(--color-card-view-background);
  }
