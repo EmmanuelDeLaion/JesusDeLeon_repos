@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react' 
 import { CardViewPokemon } from './components/CardViewPokemon'
 import { GridCardPokemons } from './components/GridCardPokemons'
 import { Navbar } from './components/Navbar'
@@ -6,29 +6,57 @@ import { SearchPokemon } from './components/SearchPokemon'
 import { TitleApp } from './components/TitleApp'
 
 export const PokedexApp = () => {
+
+  const [pokemonDataSelected, setPokemonDataSelected] = useState({});
+  //const [namePokemonSearch, setNamePokemonSearch] = useState({});
+
+
+  const getPokemonViewPokedex = (name) => {
+    setPokemonDataSelected(name);
+    //console.log(name);  
+  }
+
+  const getNameSearch = (namePokemon) => {
+    setPokemonDataSelected(namePokemon);
+  }
+ 
   return (
     <>
-        <Navbar></Navbar>
+      <Navbar></Navbar>
+      <TitleApp></TitleApp>
+
+      <div className="container-search">
+        <div className="input-search">
+          <div className="search">
+            <SearchPokemon 
+              getNameSearch={(namePokemon) => getNameSearch(namePokemon)} 
+            >
+            </SearchPokemon>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid-layout">
+        <div className="grid-card">
+          <GridCardPokemons 
+            getPokemonViewPokedex={(name)=>getPokemonViewPokedex(name)}
+          >
+          </GridCardPokemons>
+        </div>
+
+        <div className="grid-card">
+           
+          <CardViewPokemon 
+            //namePokemonSearch={namePokemonSearch} 
+            pokemonDataSelected={pokemonDataSelected}  
+            >
+          </CardViewPokemon>
         
-        <TitleApp></TitleApp> 
-
-        <div className="container-search">
-            <div className="input-search">
-                <div className="search">
-                    <SearchPokemon></SearchPokemon>
-                </div>
-            </div>
         </div>
 
-        <div className="grid-layout">
-            <div className="grid-card">
-                <GridCardPokemons></GridCardPokemons>
-            </div>
-
-            <div className="grid-card">
-                <CardViewPokemon></CardViewPokemon>
-            </div>
-        </div>
+      </div>
+ 
+      
 
     </>
   )
