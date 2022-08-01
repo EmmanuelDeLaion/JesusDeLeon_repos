@@ -3,7 +3,7 @@ import iconoRight from "../assets/images/der.png";
 import iconoLeft from "../assets/images/iz.png";
 
 
-export const ButtonsPagination = ({page, setPage, total}) => {
+export const ButtonsPagination = ({ page, setPage, total }) => {
 
   const buttonBack = () => {
     const nextPage = Math.max(page - 1, 0);
@@ -12,7 +12,7 @@ export const ButtonsPagination = ({page, setPage, total}) => {
 
   const buttonNext = () => {
     const nextPage = Math.max(page + 1, total);
-    setPage(nextPage); 
+    setPage(nextPage);
   }
 
   return (
